@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Architects+Daughter&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      width: 900px;
+      height: 650px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right h2 {
+      color: #4cbb17;
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .right p {
+      color: #888;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    .google-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 30px;
+      background: white;
+      font-size: 14px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .google-btn img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .separator {
+      text-align: center;
+      margin: 10px 0;
+      color: #888;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input::placeholder {
+      font-family: 'Poppins', sans-serif;
+      color: #aaa;
+    }
+
+    .signup-btn {
+      background-color: #4cbb17;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      margin-top: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .signup-btn:hover {
+      background-color: #3da112;
+    }
+
+    .login-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .login-text a {
+      color: #4cbb17;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        border-radius: 20px;
+      }
+
+      .left {
+        display: block;
+        width: 100%;
+        height: 250px;
+      }
+
+      /* Image on top in mobile: apply top border radius */
+      .left img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      .right {
+        padding: 30px 20px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .right {
+        padding: 25px 15px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"] {
+        font-size: 13px;
+        padding: 10px 14px;
+      }
+
+      .signup-btn {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .google-btn {
+        font-size: 13px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="./img/Login-img.jpg" alt="Sign Up Image" />
+    </div>
+    <div class="right">
+      <h2>Get Started!</h2>
+      <p>We are happy to see you here, You can Sign up your account via Google or direct email.</p>
+
+      <div class="google-btn">
+        <img src="./img/Google__G__logo.svg.png" alt="Google" />
+        Sign in with Google
+      </div>
+
+      <div class="separator">Or</div>
+
+      <input type="text" placeholder="Enter your name*" />
+      <input type="email" placeholder="Enter your E-mail id*" />
+      <input type="tel" placeholder="Phone number*" />
+      <input type="password" placeholder="New password*" />
+      <input type="password" placeholder="Re-enter password*" />
+
+      <button class="signup-btn">Sign up</button>
+
+      <div class="login-text">
+        Already have any account ? Click <a href="./Login_main.html">login</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

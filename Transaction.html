@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCF Volunteers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Architects+Daughter&display=swap"
+        rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f6f6f6;
+            overflow-x: hidden;
+        }
+
+        p {
+            margin-left: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            line-height: 100%;
+            letter-spacing: 1px;
+        }
+
+
+        .Navbar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            /* light background */
+            padding: 20px 20px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 5px 32px rgba(0, 0, 0, 0.55);
+        }
+
+        .logo {
+            margin-top: 15px;
+            color: #4CBB17;
+            /* green */
+            font-weight: 600;
+            font-size: 30px;
+            margin-left: 5%;
+        }
+
+        .menu {
+            margin-top: 15px;
+            display: flex;
+            margin-left: auto;
+            margin-right: 10%;
+            /* adjust this value to control how left it shifts */
+            gap: 30px;
+            /* space between menu items */
+        }
+
+        .menu a {
+            color: #333;
+            /* dark text */
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .menu a:hover {
+            color: #4CBB17;
+        }
+
+
+        .donation-form {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .section-line {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .row input {
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .donation-options button {
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .donation-options button:hover {
+            background-color: #4cbb17;
+            color: white;
+            border-color: #4cbb17;
+        }
+
+        .donation-options input[type="number"] {
+            margin-top: 15px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            width: 150px;
+        }
+
+
+        .next-button {
+            background-color: #4cbb17;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background-color: #3da412;
+        }
+
+        *::placeholder {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            /* optional */
+            color: #999;
+            /* optional placeholder color */
+        }
+
+        /* For broader browser support: */
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        /* Responsive for tablets (768px and below) */
+        @media (max-width: 768px) {
+            .Navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-bottom: 10px;
+                font-size: 26px;
+            }
+
+            .menu {
+                margin: 0;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: flex-start;
+            }
+
+            .donation-form {
+                padding: 20px;
+                margin: 20px 10px;
+            }
+
+            .row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .donation-options {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .donation-options button,
+            .donation-options input {
+                width: 100%;
+            }
+
+            .next-button {
+                width: 100%;
+            }
+        }
+
+        /* Responsive for mobile (400px and below) */
+        @media (max-width: 400px) {
+    .Navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 22px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .donation-form {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    form input,
+    .donation-options button,
+    .donation-options input,
+    .next-button {
+        font-size: 14px;
+    }
+
+    .donation-options {
+        gap: 8px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="Navbar">
+        <div class="logo">Help Care Foundation</div>
+        <nav class="menu">
+            <a href="./Index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Latest updates</a>
+            <a href="#">Our works</a>
+            <a href="#">Volunteer's</a>
+            <a href="./Login_main.html">Log in</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </div>
+
+
+    <div class="donation-form">
+        <form>
+            <!-- Personal Info -->
+            <div class="section-title">Personal Info</div>
+            <hr class="section-line" />
+            <div class="row">
+                <input type="text" placeholder="First name*" required>
+                <input type="text" placeholder="Last name*" required>
+            </div>
+            <input type="email" placeholder="Enter your e-mail id*" required>
+            <div class="row">
+                <input type="text" placeholder="Mobile No." required>
+                <input type="text" placeholder="Occupation*" required>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Blood Group.">
+                <input type="text" placeholder="dd-mm-yyyy">
+            </div>
+            <br />
+
+            <!-- Address Info -->
+            <div class="section-title">Address info</div>
+            <hr class="section-line" />
+            <input type="text" placeholder="Address line 1*" required>
+            <input type="text" placeholder="Address line 2*" required>
+            <div class="row">
+                <input type="text" placeholder="Pin code*" required>
+                <input type="text" placeholder="City*" required>
+                <input type="text" placeholder="State*" required>
+            </div>
+            <br />
+
+            <!-- Identification -->
+            <div class="section-title">Identification</div>
+            <hr class="section-line" />
+            <input type="text" placeholder="Aadhaar Number*" required>
+            <br />
+            <br />
+            <!-- Donation -->
+            <div class="section-title">Donation Details</div>
+            <hr class="section-line" />
+            <label style="display: block; margin-bottom: 10px;">How much would you like to donate?</label>
+
+            <div class="donation-options">
+                <button type="button">1000</button>
+                <button type="button">2000</button>
+                <button type="button">5000</button>
+                <button type="button">10000</button>
+                <input type="number" placeholder="Custom Amount" />
+            </div>
+
+            <button type="submit" class="next-button">Next</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCF Volunteers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        .top {
+            height: 50px;
+            background-color: #4CBB17;
+            color: white;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        p {
+            margin-left: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            line-height: 100%;
+            letter-spacing: 1px;
+        }
+
+        .bi.bi-envelope {
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .fa-solid.fa-location-dot {
+            margin-left: 65%;
+        }
+
+
+        .Navbar {
+            display: flex;
+            align-items: center;
+            background-color: #f4f4f4;
+            /* light background */
+            padding: 20px 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo {
+            margin-top: 15px;
+            color: #4CBB17;
+            /* green */
+            font-weight: 600;
+            font-size: 30px;
+            margin-left: 5%;
+        }
+
+        .menu {
+            margin-top: 15px;
+            display: flex;
+            margin-left: auto;
+            margin-right: 10%;
+            /* adjust this value to control how left it shifts */
+            gap: 30px;
+            /* space between menu items */
+        }
+
+        .menu a {
+            color: #333;
+            /* dark text */
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .menu a:hover {
+            color: #4CBB17;
+        }
+
+        .header {
+            background-color: #4CBB17;
+            color: white;
+            padding: 20px 90px;
+            font-size: 22px;
+            font-weight: 600;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .volunteer-section {
+            padding: 40px 60px;
+        }
+
+        .volunteer-grid {
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+        }
+
+        .volunteer-card {
+
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .volunteer-card img {
+            width: 250px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .volunteer-details {
+            line-height: 4.0;
+        }
+
+        .volunteer-details h3 {
+            font-weight: 900;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        .volunteer-details p {
+            margin: 15px;
+            line-height: 3;
+            font-size: 18px;
+        }
+
+        /* Tablet devices (768px and below) */
+        /* Tablet devices (768px and below) */
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                padding: 10px;
+            }
+
+            .fa-solid.fa-location-dot {
+                margin-left: 0;
+            }
+
+            .Navbar {
+                flex-direction: column;
+                align-items: center;
+                /* Center entire navbar content */
+                padding: 10px;
+                text-align: center;
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-top: 0;
+                font-size: 26px;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                /* Center menu items */
+                margin: 10px 0 0 0;
+                gap: 10px;
+            }
+
+            .header {
+                padding: 15px 20px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .volunteer-section {
+                padding: 20px;
+            }
+
+            .volunteer-grid {
+                gap: 30px;
+            }
+
+            .volunteer-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .volunteer-card img {
+                width: 90%;
+                height: auto;
+            }
+
+            .volunteer-details {
+                line-height: 2.2;
+            }
+
+            .volunteer-details h3 {
+                margin-left: 0;
+            }
+
+            .volunteer-details p {
+                margin: 5px 0;
+            }
+        }
+
+        /* Mobile devices (400px and below) */
+        @media (max-width: 400px) {
+        
+            .logo {
+                font-size: 22px;
+            }
+
+            .menu a {
+                font-size: 14px;
+            }
+
+            .header {
+                font-size: 18px;
+            }
+
+            .volunteer-card img {
+                width: 100%;
+                height: 60%;
+            }
+
+            .volunteer-details p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <i class="fa-solid fa-location-dot"></i>
+        <p> helpcarefoundation23@gmail.com</p>
+        <i class="bi bi-envelope"></i>
+        <p> Villupuram Dist</p>
+    </div>
+
+    <div class="Navbar">
+        <div class="logo">Help Care Foundation</div>
+        <nav class="menu">
+            <a href="./Index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Latest updates</a>
+            <a href="#">Our works</a>
+            <a href="#">Volunteer's</a>
+            <a href="./Login_main.html">Log in</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </div>
+
+    <div class="header">☉ HCF Volunteer's</div>
+
+    <div class="volunteer-section">
+        <div class="volunteer-grid">
+
+            <!-- Card 1 -->
+            <div class="volunteer-card">
+                <img src="/img/Vounteer-1.jpg" alt="Volunteer 1">
+                <div class="volunteer-details">
+                    <h3>Volunteer name</h3>
+                    <p>Age: 25</p>
+                    <p>Phone number: 8428079963</p>
+                    <p>Designation: Founder</p>
+                    <p>E-mail id: abcdefg@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="volunteer-card">
+                <img src="/img/Vounteer-2.jpg" alt="Volunteer 2">
+                <div class="volunteer-details">
+                    <h3>Volunteer name</h3>
+                    <p>Age: 25</p>
+                    <p>Phone number: 8428079963</p>
+                    <p>Designation: Founder</p>
+                    <p>E-mail id: abcdefg@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="volunteer-card">
+                <img src="/img/Vounteer-3.jpg" alt="Volunteer 3">
+                <div class="volunteer-details">
+                    <h3>Volunteer name</h3>
+                    <p>Age: 25</p>
+                    <p>Phone number: 8428079963</p>
+                    <p>Designation: Founder</p>
+                    <p>E-mail id: abcdefg@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="volunteer-card">
+                <img src="/img/Vounteer-4.jpg" alt="Volunteer 4">
+                <div class="volunteer-details">
+                    <h3>Volunteer name</h3>
+                    <p>Age: 25</p>
+                    <p>Phone number: 8428079963</p>
+                    <p>Designation: Founder</p>
+                    <p>E-mail id: abcdefg@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="volunteer-card">
+                <img src="/img/Vounteer-5.jpg" alt="Volunteer 5">
+                <div class="volunteer-details">
+                    <h3>Volunteer name</h3>
+                    <p>Age: 25</p>
+                    <p>Phone number: 8428079963</p>
+                    <p>Designation: Founder</p>
+                    <p>E-mail id: abcdefg@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="volunteer-card">
+                <img src="/img/Vounteer-6.jpg" alt="Volunteer 6">
+                <div class="volunteer-details">
+                    <h3>Volunteer name</h3>
+                    <p>Age: 25</p>
+                    <p>Phone number: 8428079963</p>
+                    <p>Designation: Founder</p>
+                    <p>E-mail id: abcdefg@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
